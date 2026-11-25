@@ -1,0 +1,38 @@
+[
+  {
+    "comparison": "LR_stable_top10 minus LR_all150",
+    "mean": 0.10329788568919,
+    "minimum": 0.08220611916264087,
+    "maximum": 0.12399042181650866
+  },
+  {
+    "comparison": "LR_stable_top30 minus LR_all150",
+    "mean": 0.09400317878578743,
+    "minimum": 0.08413325804630156,
+    "maximum": 0.1236552899596377
+  },
+  {
+    "comparison": "LR_stable_top50 minus LR_all150",
+    "mean": 0.08598207750381662,
+    "minimum": 0.07199479264696673,
+    "maximum": 0.1057981471024948
+  },
+  {
+    "comparison": "QDA_stable_top10 minus QDA_pearson30",
+    "mean": -0.018892548675157394,
+    "minimum": -0.02524102306711018,
+    "maximum": -0.014204676161197916
+  },
+  {
+    "comparison": "QDA_stable_top30 minus QDA_pearson30",
+    "mean": -0.009050651441955826,
+    "minimum": -0.016781165694209288,
+    "maximum": -0.0006624213145950408
+  },
+  {
+    "comparison": "QDA_stable_top50 minus QDA_pearson30",
+    "mean": -0.0051785975699020215,
+    "minimum": -0.00938160068594851,
+    "maximum": 0.0003168329255284208
+  }
+]

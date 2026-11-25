@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-25",
+  "bootstrap_replicates": 1000,
+  "top_counts": [
+    10,
+    30,
+    50
+  ],
+  "bootstrap_seed": 20261125,
+  "cv_seed": 420304,
+  "cv_folds": 5,
+  "cv_repeats": 5,
+  "selector": "sort frequencies descending (ties original feature index); keep prefix ending at largest adjacent drop; ties choose smallest prefix; if no positive gap retain all; descriptive heuristic not proof of separation",
+  "predictive_primary": "QDA fixed reg_param=1e-6 tol=1e-10; standardization fitted on training folds",
+  "comparators": [
+    "all150",
+    "pearson30",
+    "stable_top10",
+    "stable_top30",
+    "stable_top50"
+  ],
+  "evaluation": "All supervised selection rerun on each outer training fold (200 rows); 1000 bootstrap draws of training-fold size; same resamples across top-count variants; no tuning on outer validation",
+  "report_spread": "per-repeat mean fold AUC and its SD/range; fold SD supplementary; paired repeat differences descriptive, no independence claim",
+  "scope": "No new Kaggle submissions; no threshold tuning to improve results; all branches reported."
+}

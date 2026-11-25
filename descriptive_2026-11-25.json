@@ -1,0 +1,53 @@
+[
+  {
+    "top_count": 10,
+    "selected_count": 8,
+    "max_drop": 0.36200000000000004,
+    "above_frequency": 0.661,
+    "below_frequency": 0.299,
+    "features": [
+      98,
+      100,
+      17,
+      46,
+      112,
+      77,
+      80,
+      49
+    ]
+  },
+  {
+    "top_count": 30,
+    "selected_count": 8,
+    "max_drop": 0.17699999999999994,
+    "above_frequency": 0.955,
+    "below_frequency": 0.778,
+    "features": [
+      17,
+      46,
+      77,
+      80,
+      98,
+      100,
+      112,
+      49
+    ]
+  },
+  {
+    "top_count": 50,
+    "selected_count": 8,
+    "max_drop": 0.08199999999999996,
+    "above_frequency": 0.985,
+    "below_frequency": 0.903,
+    "features": [
+      17,
+      46,
+      77,
+      80,
+      98,
+      100,
+      112,
+      49
+    ]
+  }
+]
