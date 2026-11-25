@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.zip
+*.log
+reproduced_submission*.csv
+submission*.csv
+train.csv
+test.csv
+sample_submission.csv
+baseline_*/
+improved_*/
+qda_precision_*/

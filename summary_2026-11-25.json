@@ -1,0 +1,9 @@
+{
+  "source_date": "2026-11-23",
+  "selection_mean_auc": 0.9967642261120523,
+  "nested_search_mean_auc": 0.9943508584812932,
+  "public_auc_archived": 0.99241,
+  "private_auc": null,
+  "submission_sha256": "9ed1cffad27cdefd837685738db87affbf9694dde4d0b59dde5cef4d20568703",
+  "individual_extension_4": "planned; not implemented"
+}
