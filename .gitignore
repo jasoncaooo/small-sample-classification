@@ -12,3 +12,6 @@ sample_submission.csv
 baseline_*/
 improved_*/
 qda_precision_*/
+.venv*/
+extension1_local_results*/
+

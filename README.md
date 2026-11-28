@@ -1,6 +1,6 @@
 # Small-sample classification
 
-Joint DSAI4203 coursework by **Cao Wei and Ron**. Portfolio prepared on **2026-11-25**.
+Joint DSAI4203 coursework by **Cao Wei and Ron**. Portfolio prepared on **2026-11-25**; Extension 1 added and verified on **2026-11-28**.
 
 A reproducible classification experiment on 250 labelled rows with 150 numerical features. The workflow studies feature filtering and model selection under limited training data, then generates scores for 19,750 test rows.
 
@@ -60,6 +60,27 @@ Cao Wei's individual extension on bootstrap feature-ranking stability is now com
 
 Small labelled sample; adaptive reuse of data; unknown private score; no calibrated probabilities. The export transforms decision scores to average ranks divided by `(n_test + 1)`, preserving ordering rather than estimating class probabilities. The generic QDA search includes small positive regularization, not zero regularization. No external training data are used.
 
+
+## Individual extension 1 Validation protocol sensitivity
+
+Ron’s assigned extension now has a [reproducible code and results package](extension1_2026-11-28/README.md), verified on **2026-11-28**. The fixed Pearson-top-30 + QDA recipe is evaluated with 30 seeds under 20% hold-out and stratified 3-, 5- and 10-fold CV. The run includes 120 estimates and 570 fits; all estimates match the original implementation exactly.
+
+| Scheme | Mean AUC | SD across seeds | Range |
+|---|---:|---:|---:|
+| 20% hold-out | 0.99699 | 0.00480 | 0.01449 |
+| 3-fold | 0.99188 | 0.00628 | 0.03015 |
+| 5-fold | 0.99443 | 0.00426 | 0.02061 |
+| 10-fold | 0.99679 | 0.00193 | 0.00645 |
+
+Ten-fold has the smallest observed spread in this experiment. This does **not** establish that a 0.01 difference between two models is reliable: repeated splits reuse the same rows, training sizes differ, and no paired two-model comparison was performed. See the package for the interpretation, contribution boundaries and [full-precision results](extension1_2026-11-28/results_2026-11-28/summary_2026-11-28.csv).
+
+Quick start after installing the [extension dependencies](extension1_2026-11-28/requirements_2026-11-28.txt):
+
+```bash
+python extension1_2026-11-28/validation_protocol_2026-11-28.py --zip /path/to/small-sample-classification-challenge.zip --output extension1_local_results_2026-11-28
+python extension1_2026-11-28/verify_results_2026-11-28.py --results extension1_local_results_2026-11-28
+```
+
 ## Individual extension 4 (completed 2026-11-25)
 
 1,000 resamples of 250 rows, with top counts 10/30/50, reveal a common full-data largest-drop boundary after eight features. Predictive evaluation rebuilds the selector inside each training fold. Fixed LR improves from 0.7556 (all 150) to 0.8589 (stable rule at k=10), while stable-subset QDA underperforms ordinary top-30 QDA. Stability therefore does not imply predictive optimality. These are descriptive repeated-CV results, not new Kaggle scores or proof of causal improvement. All-feature QDA failed at the fixed setting; the documented pre-score amendment adds LR for the required complete comparison.
@@ -73,3 +94,4 @@ python feature_stability_2026-11-25_v2.py --zip small-sample-classification-chal
 ```
 
 The downloadable reproduction bundle additionally includes the figure/report builder, pinned reporting dependencies, reviewer checks, protocol, amendment and archived aggregates. Private row-level audits are generated locally, not published. For updated resume wording see [resume v2](resume_2026-11-25_v2.md); previous dated notes are historical snapshots.
+
