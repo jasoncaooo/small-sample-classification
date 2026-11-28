@@ -1,8 +1,15 @@
 # Small-sample classification
 
-Joint DSAI4203 coursework by **Cao Wei and Ron**. Portfolio prepared on **2026-11-25**; Extension 1 added and verified on **2026-11-28**.
+Joint DSAI4203 coursework by **Cao Wei and Ron**. Portfolio prepared on **2026-11-25**; Extensions 1 and 4 updated and checked on **2026-11-28**.
 
 A reproducible classification experiment on 250 labelled rows with 150 numerical features. The workflow studies feature filtering and model selection under limited training data, then generates scores for 19,750 test rows.
+
+## Latest materials
+
+- **Extension 4 (Cao Wei):** [current report, notes, code and evidence](extension4_2026-11-28/README.md) · [read the report online](extension4_2026-11-28/Extension4_Report_2026-11-28.md).
+- **Extension 1 (Ron):** [validation protocol sensitivity: code and verified results](extension1_2026-11-28/README.md).
+
+The current Extension 4 report is dated **2026-11-28**. Use the web report if GitHub's PDF preview fails; PDF and editable Word downloads are linked in the package. Superseded reports are retained in Git history rather than the current file list.
 
 ## Method
 
@@ -54,7 +61,7 @@ This is substantially slower than final-model reproduction. New results use date
 
 The shared model-development project was completed jointly by Cao Wei and Ron. Individual ownership of historical components is not asserted. OpenAI Codex assisted with model design, code, experiment checking and documentation. Authors remain responsible for understanding and presenting the work.
 
-Cao Wei's individual extension on bootstrap feature-ranking stability is now complete. See the [two-page report](Extension4_Report_2026-11-25.pdf), [aggregate results](extension4_summary_2026-11-25.csv) and [reproduction bundle](Extension4_Reproducible_2026-11-25.zip). Codex assisted with design, implementation, execution, analysis and drafting; this is not a claim of unaided authorship.
+Cao Wei's individual extension on bootstrap feature-ranking stability is complete; the [28 November revision](extension4_2026-11-28/README.md) adds same-size feature identity and training-fold inclusion checks. Codex assisted with design, implementation, execution, analysis and drafting; this is not a claim of unaided authorship.
 
 ## Limitations
 
@@ -81,17 +88,12 @@ python extension1_2026-11-28/validation_protocol_2026-11-28.py --zip /path/to/sm
 python extension1_2026-11-28/verify_results_2026-11-28.py --results extension1_local_results_2026-11-28
 ```
 
-## Individual extension 4 (completed 2026-11-25)
+## Individual extension 4 — revised 2026-11-28
 
-1,000 resamples of 250 rows, with top counts 10/30/50, reveal a common full-data largest-drop boundary after eight features. Predictive evaluation rebuilds the selector inside each training fold. Fixed LR improves from 0.7556 (all 150) to 0.8589 (stable rule at k=10), while stable-subset QDA underperforms ordinary top-30 QDA. Stability therefore does not imply predictive optimality. These are descriptive repeated-CV results, not new Kaggle scores or proof of causal improvement. All-feature QDA failed at the fixed setting; the documented pre-score amendment adds LR for the required complete comparison.
+1,000 resamples with top counts 10/30/50 reveal a full-data largest-drop boundary after eight features. Predictive evaluation rebuilds the selector inside every training fold. Fixed LR improves from 0.7556 (all 150) to 0.8589 (stable rule at k = 10), while stable-subset QDA underperforms ordinary top-30 QDA. All-feature QDA failed at the fixed setting; the documented pre-score amendment adds LR for the complete comparison.
+
+The new post-hoc audit finds **75/75 feature sets identical to ordinary Pearson at the same count**, conditional on the count selected by bootstrap. At k = 10, seven core features appear in every training fold while feature 49 appears in only 6/25. These checks add no model fits or AUCs and do not establish that bootstrap chooses the count better than an independent method.
 
 ![Bootstrap selection frequencies](feature_frequency_2026-11-25.png)
 
-Run the experiment with the original dependencies:
-
-```bash
-python feature_stability_2026-11-25_v2.py --zip small-sample-classification-challenge.zip --output extension4_local_results_2026-11-25
-```
-
-The downloadable reproduction bundle additionally includes the figure/report builder, pinned reporting dependencies, reviewer checks, protocol, amendment and archived aggregates. Private row-level audits are generated locally, not published. For updated resume wording see [resume v2](resume_2026-11-25_v2.md); previous dated notes are historical snapshots.
-
+Read the [updated report online](extension4_2026-11-28/Extension4_Report_2026-11-28.md), or open the [complete Extension 4 package](extension4_2026-11-28/README.md) for PDF, editable Word, Chinese speaker notes, source code, reproducible commands and audit evidence. Original scientific code, protocol and aggregate results retain their original dates; only superseded report/ZIP and conflicting README snapshots are removed from the current branch.
