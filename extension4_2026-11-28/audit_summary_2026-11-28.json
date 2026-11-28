@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-28",
+  "analysis_type": "post-hoc identity and inclusion audit",
+  "data_sha256": "76c013e20d261ced5d98ab2480ea2e129e7a879593996ab56bbe0076821b5300",
+  "identical_sets": 75,
+  "total_checks": 75,
+  "model_fits_performed": 0,
+  "new_auc_estimates": false,
+  "matching_count_source": "archived bootstrap selected count in each training fold",
+  "interpretation": "All observed sets equal Pearson top-m conditional on m. This does not test a bootstrap-free count-selection rule.",
+  "fold_dependence": "Overlapping repeated-CV training folds; inclusion counts are descriptive.",
+  "summaries": [
+    {
+      "top_count": 10,
+      "fold_checks": 25,
+      "same_feature_set_count": 25,
+      "size_distribution": {
+        "7": 19,
+        "8": 5,
+        "9": 1
+      },
+      "always_selected": [
+        17,
+        46,
+        77,
+        80,
+        98,
+        100,
+        112
+      ],
+      "feature49_selected_count": 6
+    },
+    {
+      "top_count": 30,
+      "fold_checks": 25,
+      "same_feature_set_count": 25,
+      "size_distribution": {
+        "7": 5,
+        "8": 12,
+        "9": 2,
+        "10": 3,
+        "11": 1,
+        "12": 1,
+        "13": 1
+      },
+      "always_selected": [
+        17,
+        46,
+        77,
+        80,
+        98,
+        100,
+        112
+      ],
+      "feature49_selected_count": 20
+    },
+    {
+      "top_count": 50,
+      "fold_checks": 25,
+      "same_feature_set_count": 25,
+      "size_distribution": {
+        "8": 10,
+        "9": 5,
+        "10": 3,
+        "11": 2,
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 2
+      },
+      "always_selected": [
+        17,
+        46,
+        49,
+        77,
+        80,
+        98,
+        100,
+        112
+      ],
+      "feature49_selected_count": 25
+    }
+  ]
+}
