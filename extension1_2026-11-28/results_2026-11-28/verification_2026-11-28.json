@@ -1,0 +1,12 @@
+{
+  "data_sha256": "76c013e20d261ced5d98ab2480ea2e129e7a879593996ab56bbe0076821b5300",
+  "n_estimates": 120,
+  "n_model_fits": 570,
+  "expected_model_fits": 570,
+  "warning_count": 0,
+  "all_scores_finite": true,
+  "disjoint_train_validation_checked": true,
+  "cv_validation_coverage_checked": true,
+  "scaler_training_rows_checked": true,
+  "raw_rows_or_predictions_exported": false
+}

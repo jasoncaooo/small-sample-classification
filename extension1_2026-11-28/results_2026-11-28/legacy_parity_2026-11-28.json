@@ -1,0 +1,8 @@
+{
+  "checked_estimates": 120,
+  "reference_model_fits": 570,
+  "max_absolute_auc_difference": 0.0,
+  "pass": true,
+  "original_script_sha256": "4ce136855e2905826e7ecc035244bb6e86b76a0519d70b4ca67b7401eb273a4f",
+  "shared_helper_git_blob_sha": "8d9a74ec0589557e1045f1d2c4313ce650224e12"
+}
